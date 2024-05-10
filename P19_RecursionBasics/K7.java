@@ -7,8 +7,8 @@ public class K7 {
         if(n==0 || n==1){
             return n;
         }
-        // int fnm1=Fibonacci(n-1);
-        // int fnm2=Fibonacci(n-2);
+        // int fnm1=Fibonacci(n-1); // fnm1-->f(n-1)
+        // int fnm2=Fibonacci(n-2); fnm2-->f(n-2)
         int fb=Fibonacci(n-1)+Fibonacci(n-2);
         return fb;
     }
