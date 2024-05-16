@@ -1,4 +1,8 @@
 //Merge Sort using RECURSION
+//in this case, we used DEPTH FIRST TECHNIQUE
+/* in this case the space complexity is O(n),i.e, equal to temp array
+ * so we cannot use this when we want to sort but without extra spaces
+ */
 public class K2 {
     public static void main(String[] args) {
         int a[]={6,3,9,5,2,9,8};
