@@ -1,4 +1,7 @@
 //Quick Sort using RECURSION
+
+import java.util.Arrays;
+
 public class K3 {
     public static void main(String[] args) {
         int a[]={6,3,9,5,2,9,8};
@@ -17,7 +20,7 @@ public class K3 {
     }
 
     public static int partition(int a[],int si,int ei){
-        int pivot=a[ei]   ;
+        int pivot=a[ei];
         int i=si-1;//to make place for elements smaller than pivot
         for (int j = si; j < ei; j++) {
             if(a[j]<=pivot){
@@ -36,9 +39,10 @@ public class K3 {
     }
 
     public static void printArr(int a[]) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]+" ");
-        }
-        System.out.println();
+        // for (int i = 0; i < a.length; i++) {
+        //     System.out.print(a[i]+" ");
+        // }
+        // System.out.println();
+        System.out.println(Arrays.toString(a));
     }
 }
