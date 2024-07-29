@@ -1,10 +1,10 @@
 //This program prints all possible ways in which a Chessboard can be filled with queens
 public class QueenOverview {
     public static void main(String[] args) {
-        int n=2;
-        char chessBoard[][]=new char[2][2];
-        // int n=3;
-        // char chessBoard[][]=new char[3][3];
+        // int n=2;
+        // char chessBoard[][]=new char[2][2];
+        int n=3;
+        char chessBoard[][]=new char[3][3];
         //initialize the chessboard
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
