@@ -10,13 +10,13 @@ public class K1 {
 
 class Pen{
     String color;
-    int tip;
+    double tip;
     
     void setColor(String newColor){
         color=newColor;
     }
 
-    void setTip(int newTip){
+    void setTip(double newTip){
         tip=newTip;
     }
 }

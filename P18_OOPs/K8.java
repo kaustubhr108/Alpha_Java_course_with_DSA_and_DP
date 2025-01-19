@@ -8,7 +8,7 @@ public class K8 {
 
 class Animal{
     void eat(){
-        System.out.println("Eats Anything")
+        System.out.println("Eats Anything");
     }
 }
 
