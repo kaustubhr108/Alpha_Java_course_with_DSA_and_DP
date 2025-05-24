@@ -1,9 +1,9 @@
-// N Queens Problem (Count Ways)
-// in this, instead of printing the board when the base case is hit, we will INCREASE COUNT
-public class K5 {
-    static int count=0;
+// N Queens Problem (Print 1 Solution)
+public class K6 {
+    static int count = 0;
+
     public static void main(String[] args) {
-        int n = 4;
+        int n = 2;
         char chessBoard[][] = new char[n][n];
         // initialize the chessboard
         for (int i = 0; i < n; i++) {
@@ -11,8 +11,14 @@ public class K5 {
                 chessBoard[i][j] = 'X';
             }
         }
-        nQueens(chessBoard, 0);
-        System.out.println("Total ways:"+count);
+        if(nQueens(chessBoard, 0)){
+            System.out.println("Solution is Possible");;
+            printBoard(chessBoard);
+        }
+        else{
+            System.out.println("Solution is not Possible");
+        }
+        System.out.println("Total ways:" + count);
     }
 
     public static boolean isSafe(char board[][], int row, int col) {
@@ -37,22 +43,25 @@ public class K5 {
         return true;
     }
 
-    public static void nQueens(char board[][], int rowNo) {
+    public static boolean nQueens(char board[][], int rowNo) {
         // Base case
         if (rowNo == board.length) {
             // printBoard(board);
             count++;
-            return;
+            return true;
         }
         // Column Loop
 
         for (int j = 0; j < board.length; j++) {
             if (isSafe(board, rowNo, j)) {
                 board[rowNo][j] = 'Q';
-                nQueens(board, rowNo + 1); // fn call
+                if (nQueens(board, rowNo + 1)) {
+                    return true;
+                }
                 board[rowNo][j] = 'X'; // backtracking step
             }
         }
+        return false;
     }
 
     public static void printBoard(char board[][]) {
