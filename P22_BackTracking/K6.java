@@ -3,7 +3,7 @@ public class K6 {
     static int count = 0;
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 4;
         char chessBoard[][] = new char[n][n];
         // initialize the chessboard
         for (int i = 0; i < n; i++) {
@@ -18,7 +18,7 @@ public class K6 {
         else{
             System.out.println("Solution is not Possible");
         }
-        System.out.println("Total ways:" + count);
+        // System.out.println("Total ways:" + count);
     }
 
     public static boolean isSafe(char board[][], int row, int col) {
